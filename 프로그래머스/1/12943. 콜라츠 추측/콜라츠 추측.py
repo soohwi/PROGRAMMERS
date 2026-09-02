@@ -4,12 +4,8 @@ def solution(num):
     while num != 1 and count < 500:
         if num % 2 == 0:
             num = num / 2
-            count += 1
         else:
             num = num * 3 + 1
-            count += 1
+        count += 1
             
-    if count == 500:
-        return -1
-    
-    return count 
+    return -1 if count == 500 else count
