@@ -1,5 +1,3 @@
 def solution(a, b):
-    
-    result = [valA*valB for valA, valB in zip(a, b)]
-    
-    return sum(result)
+
+    return sum([x*y for x, y, in zip(a, b)])
