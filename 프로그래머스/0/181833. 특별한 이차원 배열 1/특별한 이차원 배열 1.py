@@ -1,9 +1,7 @@
 def solution(n):
-    a = []
-    for i in range(n):
-        a.append([0] * n)
+    a = [[0] * n for i in range(n)]
     
-    for idx, val in enumerate(a):
-        val[idx] = 1
+    for i in range(n):
+        a[i][i] = 1
         
     return a
