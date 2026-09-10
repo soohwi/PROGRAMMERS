@@ -1,15 +1,7 @@
 def solution(picture, k):
-    newPicture = []
-    for i in picture:
-        pictureItem = []
-        for j in list(i):
-            pictureItem.append(j*k)
-            
-        newPicture.append(''.join(pictureItem))
-        
-    result = []
-    for newItem in newPicture:
+    answer = []
+    for i in range(len(picture)):
         for _ in range(k):
-            result.append(newItem)
-            
-    return result
+            answer.append(picture[i].replace('.', '.' * k).replace('x', 'x' * k))
+
+    return answer
